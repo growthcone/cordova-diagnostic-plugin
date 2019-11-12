@@ -10,7 +10,7 @@
     <license>MIT</license>
     <keywords>ecosystem:cordova,cordova,phonegap,android,ios,windows,diagnostic,wifi,location,gps,camera,bluetooth,settings</keywords>
     <engines>
-        <engine name="cordova" version=">=7.1.0"/>
+        <engine name="cordova" version=">=6.5.0"/>
         <engine name="cordova-android" version=">=6.3.0"/>
         <engine name="cordova-ios" version=">=4.3.0"/>
     </engines>
@@ -229,7 +229,7 @@
         <config-file target="*-Info.plist" parent="NSRemindersUsageDescription">
             <string>This app requires reminders access to function properly.</string>
         </config-file>
-        
+
         <header-file src="src/ios/Diagnostic_Reminders.h" />
         <source-file src="src/ios/Diagnostic_Reminders.m" />
         <!--END_MODULE REMINDERS-->
