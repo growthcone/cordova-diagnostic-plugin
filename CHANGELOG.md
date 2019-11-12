@@ -1,5 +1,17 @@
 # CHANGELOG
 
+**v5.0.1**
+* Add types for various statuses constants (thanks to [@fcamblor](https://github.com/fcamblor))
+* (iOS) Add placeholder `NSBluetoothAlwaysUsageDescription` to Bluetooth module. 
+    * Resolves [#369](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/369).
+* (iOS) Only initialise the native Bluetooth manager on calling a plugin API operation in the Bluetooth module.
+    * This is necessary because on iOS 13, since initialising the Bluetooth manager implicitly requests runtime access to Bluetooth, presenting the user with a permission dialog.
+    * Fixes [#365](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/365).
+* (iOS): Fix setting/getting of persistent user settings so motion permission status is correctly determined. Fixes [#372](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/372).    
+
+**v5.0.0**
+* BREAKING CHANGE - Align permission status constants between iOS and Android platforms. Resolves [#230](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/230).
+
 **v4.0.12**
 * Enable default version of Android Support Library to be overridden at plugin installation via ANDROID_SUPPORT_VERSION plugin variable. Resolves [#338](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/338).
 * Bump default Android Support Library version to `28.+` to match `cordova-android@8.0.0`.
