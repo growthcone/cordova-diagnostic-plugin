@@ -90,7 +90,7 @@ static NSString*const LOG_TAG = @"Diagnostic_Bluetooth[native]";
 {
     [self.commandDelegate runInBackground:^{
         @try {
-            // [self ensureBluetoothManager]; // ios13のためにコメントアウト
+            [self ensureBluetoothManager];
             [diagnostic sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] :command];
         }
         @catch (NSException *exception) {
